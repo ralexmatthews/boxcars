@@ -12,6 +12,7 @@ const Select = <A extends string>({
   <div className="max-h-64 min-[400px]:max-h-[50vh] overflow-y-auto rounded border w-48">
     {options.map((value) => (
       <div
+        key={value}
         className={`px-2 py-1 w-full ${
           value === selected ? "bg-gray-300" : ""
         }`}

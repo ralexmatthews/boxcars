@@ -1,0 +1,28 @@
+{
+  "even": {
+    "2": "Plains",
+    "3": "Southeast",
+    "4": "Southeast",
+    "5": "Southeast",
+    "6": "North Central",
+    "7": "North Central",
+    "8": "Northeast",
+    "9": "Northeast",
+    "10": "Northeast",
+    "11": "Northeast",
+    "12": "Northeast"
+  },
+  "odd": {
+    "2": "Southwest",
+    "3": "South Central",
+    "4": "South Central",
+    "5": "South Central",
+    "6": "Southwest",
+    "7": "Southwest",
+    "8": "Plains",
+    "9": "Northwest",
+    "10": "Northwest",
+    "11": "Plains",
+    "12": "Northwest"
+  }
+}

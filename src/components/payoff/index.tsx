@@ -10,7 +10,7 @@ const Payoff = () => {
   const payoff = getPayoff(origin, destination);
 
   return (
-    <div className="flex flex-col items-center gap-4 pt-4">
+    <div className="flex flex-col items-center gap-4">
       <div className="flex flex-col items-center ">
         <p>
           {origin} to {destination} pays
