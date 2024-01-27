@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: "Boxcar Assistant",
   description: "Compute Payouts and eventually optimal routes",
   manifest: "/manifest.json",
+  keywords: ["boxcars", "rail baron", "payoffs", "destinations"],
+  authors: [{ name: "Alex Matthews" }],
+  icons: [
+    { rel: "apple-touch-icon", url: "train_with_background_128x128.png" },
+    { rel: "icon", url: "train_with_background_128x128.png" },
+  ],
 };
 
 export default function RootLayout({
