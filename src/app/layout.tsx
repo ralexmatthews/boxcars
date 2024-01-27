@@ -7,12 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Boxcar Assistant",
   description: "Compute Payouts and eventually optimal routes",
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
   keywords: ["boxcars", "rail baron", "payoffs", "destinations"],
   authors: [{ name: "Alex Matthews" }],
   icons: [
-    { rel: "apple-touch-icon", url: "train_with_background_128x128.png" },
-    { rel: "icon", url: "train_with_background_128x128.png" },
+    { rel: "apple-touch-icon", url: "icon_192x192.png" },
+    { rel: "icon", url: "icon_192x192.png" },
   ],
 };
 
