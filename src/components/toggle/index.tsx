@@ -10,10 +10,11 @@ const Toggle = <A extends string | number>({
   onSelected,
 }: Props<A>) => {
   return (
-    <div className="flex">
+    <div className="flex w-full">
       {options.map((option) => (
         <button
-          className={`first:rounded-l-lg first:border-l border-l-0 last:rounded-r-lg border border-black p-2 ${
+          type="button"
+          className={`w-full first:rounded-l-lg first:border-l border-l-0 last:rounded-r-lg border border-black p-2 ${
             option === selected ? "bg-amber-200" : "bg-white"
           }`}
           key={option}

@@ -17,7 +17,11 @@ const Select = <A extends string>({
           value === selected ? "bg-gray-300" : ""
         }`}
       >
-        <button className="w-full text-left" onClick={() => onSelected(value)}>
+        <button
+          type="button"
+          className="w-full text-left"
+          onClick={() => onSelected(value)}
+        >
           {value}
         </button>
       </div>
