@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="px-4 py-2 bg-white shadow flex items-end gap-4 border-b justify-center sm:justify-start">
+      <div className="px-4 py-2 bg-amber-50 shadow flex items-end gap-4 border-b justify-center sm:justify-start">
         <Image src="/train.png" alt="boxcars" width={48} height={48} />
         <p className="text-3xl leading-6">Boxcar Assistant</p>
       </div>

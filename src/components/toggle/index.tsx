@@ -15,7 +15,7 @@ const Toggle = <A extends string | number>({
         <button
           type="button"
           className={`w-full first:rounded-l-lg first:border-l border-l-0 last:rounded-r-lg border border-black p-2 ${
-            option === selected ? "bg-amber-200" : "bg-white"
+            option === selected ? "bg-amber-100" : "bg-white"
           }`}
           key={option}
           onClick={() => onSelected(option)}

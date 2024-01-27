@@ -14,7 +14,7 @@ const Select = <A extends string>({
       <div
         key={value}
         className={`px-2 py-1 w-full ${
-          value === selected ? "bg-gray-300" : ""
+          value === selected ? "bg-amber-100" : ""
         }`}
       >
         <button
