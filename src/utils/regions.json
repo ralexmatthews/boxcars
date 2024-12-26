@@ -1,5 +1,5 @@
 {
-  "even": {
+  "odd": {
     "2": "Plains",
     "3": "Southeast",
     "4": "Southeast",
@@ -12,7 +12,7 @@
     "11": "Northeast",
     "12": "Northeast"
   },
-  "odd": {
+  "even": {
     "2": "Southwest",
     "3": "South Central",
     "4": "South Central",

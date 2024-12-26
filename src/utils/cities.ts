@@ -47,7 +47,7 @@ export const CITIES = [
   "Phoenix",
   "Pittsburgh",
   "Pocatello",
-  "Portland, MA",
+  "Portland, ME",
   "Portland, OR",
   "Pueblo",
   "Rapid City",
