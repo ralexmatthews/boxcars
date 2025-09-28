@@ -9,24 +9,15 @@ const Select = <A extends string>({
   selected,
   onSelected,
 }: Props<A>) => (
-  <div className="max-h-64 min-[400px]:max-h-[50vh] overflow-y-auto rounded border w-48">
+  <select
+    className="text-lg px-2 py-4 overflow-y-auto rounded border border-black w-full max-w-48"
+    value={selected}
+    onChange={(e) => onSelected(e.target.value as A)}
+  >
     {options.map((value) => (
-      <div
-        key={value}
-        className={`px-2 py-1 w-full ${
-          value === selected ? "bg-amber-100" : ""
-        }`}
-      >
-        <button
-          type="button"
-          className="w-full text-left"
-          onClick={() => onSelected(value)}
-        >
-          {value}
-        </button>
-      </div>
+      <option key={value}>{value}</option>
     ))}
-  </div>
+  </select>
 );
 
 export default Select;

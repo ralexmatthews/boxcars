@@ -8,7 +8,7 @@ import {
   getDestination,
   getRegion,
 } from "@/utils/destinations";
-import Select from "../select";
+import SelectList from "../select_list";
 
 const Destination = () => {
   const [regionRed, setRegionRed] = useState<Red>("even");
@@ -41,7 +41,7 @@ const Destination = () => {
             setManualOverrideRegion(null);
           }}
         />
-        <Select
+        <SelectList
           options={REGIONS}
           selected={region}
           onSelected={setManualOverrideRegion}

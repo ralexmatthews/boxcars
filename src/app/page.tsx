@@ -1,12 +1,15 @@
 "use client";
-import { useState } from "react";
+import Destination from "@/components/destination";
+import HomeBases from "@/components/home_bases";
 import Payoff from "@/components/payoff";
 import Toggle from "@/components/toggle";
-import Destination from "@/components/destination";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
-  const [fn, setFn] = useState<"Payoff" | "Destination">("Payoff");
+  const [fn, setFn] = useState<"Payoff" | "Destination" | "Home Bases">(
+    "Payoff",
+  );
 
   return (
     <main>
@@ -14,14 +17,15 @@ export default function Home() {
         <Image src="/train.png" alt="boxcars" width={48} height={48} />
         <p className="text-3xl leading-6">Boxcar Assistant</p>
       </div>
-      <div className="flex flex-col items-center mt-8 gap-8 max-w-96 mx-auto px-8">
+      <div className="flex flex-col items-center mt-8 gap-8 max-w-lg mx-auto px-8">
         <Toggle
-          options={["Payoff", "Destination"]}
+          options={["Payoff", "Destination", "Home Bases"]}
           selected={fn}
           onSelected={setFn}
         />
         {fn === "Payoff" && <Payoff />}
         {fn === "Destination" && <Destination />}
+        {fn === "Home Bases" && <HomeBases />}
       </div>
     </main>
   );

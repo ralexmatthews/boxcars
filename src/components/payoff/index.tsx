@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CITIES, City } from "@/utils/cities";
 import { getPayoff } from "@/utils/payoff";
-import Select from "../select";
+import SelectList from "../select_list";
 
 const Payoff = () => {
   const [origin, setOrigin] = useState<City>("Albany");
@@ -22,11 +22,15 @@ const Payoff = () => {
       <div className="flex flex-col items-center gap-4 min-[400px]:flex-row min-[400px]:items-start">
         <div>
           <p>Origin</p>
-          <Select options={CITIES} selected={origin} onSelected={setOrigin} />
+          <SelectList
+            options={CITIES}
+            selected={origin}
+            onSelected={setOrigin}
+          />
         </div>
         <div>
           <p>Destination</p>
-          <Select
+          <SelectList
             options={CITIES}
             selected={destination}
             onSelected={setDestination}
