@@ -5,7 +5,7 @@ import "./globals.css";
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Boxcar Assistant",
+  title: "Boxcars Assistant",
   description: "Compute Payouts and eventually optimal routes",
   manifest: "/manifest.webmanifest",
   keywords: ["boxcars", "rail baron", "payoffs", "destinations"],

@@ -1,8 +1,6 @@
-const TextInput = <A extends string>(
-  props: React.InputHTMLAttributes<HTMLInputElement>,
-) => (
+const TextInput = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
   <input
-    className="text-lg px-2 py-4 overflow-y-auto rounded border border-black w-full max-w-48"
+    className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg bg-white transition-colors placeholder-gray-400 outline-none"
     {...props}
   />
 );

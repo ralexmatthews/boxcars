@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 type Props<A extends string> = {
   options: readonly A[];
   selected: A;
@@ -9,17 +11,21 @@ const SelectList = <A extends string>({
   selected,
   onSelected,
 }: Props<A>) => (
-  <div className="max-h-64 min-[400px]:max-h-[50vh] overflow-y-auto rounded border border-black w-48">
+  <div className="max-h-64 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-sm w-full">
     {options.map((value) => (
       <div
         key={value}
-        className={`px-2 py-1 w-full ${
-          value === selected ? "bg-amber-100" : ""
-        }`}
+        className={classNames(
+          "border-b border-gray-100 last:border-b-0",
+          value === selected ? "bg-primary" : "hover:bg-gray-50",
+        )}
       >
         <button
           type="button"
-          className="w-full text-left"
+          className={classNames(
+            "w-full flex text-left px-4 py-3 text-sm transition-colors",
+            value === selected ? "text-white font-medium" : "text-gray-700",
+          )}
           onClick={() => onSelected(value)}
         >
           {value}

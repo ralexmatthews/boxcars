@@ -1,6 +1,6 @@
 {
-    "theme_color": "#fffbeb",
-    "background_color": "#fffbeb",
+    "theme_color": "oklch(76.9% 0.188 70.08)",
+    "background_color": "oklch(76.9% 0.188 70.08)",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",

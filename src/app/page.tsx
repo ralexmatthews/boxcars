@@ -1,31 +1,67 @@
 "use client";
 import Destination from "@/components/destination";
-import HomeBases from "@/components/home_bases";
 import Payoff from "@/components/payoff";
+import Players from "@/components/players";
 import Toggle from "@/components/toggle";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [fn, setFn] = useState<"Payoff" | "Destination" | "Home Bases">(
-    "Payoff",
-  );
+  const [fn, setFn] = useState<"Payoff" | "Destination" | "Players">("Payoff");
 
   return (
-    <main>
-      <div className="px-4 py-2 bg-amber-50 shadow flex items-end gap-4 border-b justify-center sm:justify-start">
-        <Image src="/train.png" alt="boxcars" width={48} height={48} />
-        <p className="text-3xl leading-6">Boxcar Assistant</p>
-      </div>
-      <div className="flex flex-col items-center mt-8 gap-8 max-w-lg mx-auto px-8">
-        <Toggle
-          options={["Payoff", "Destination", "Home Bases"]}
-          selected={fn}
-          onSelected={setFn}
-        />
-        {fn === "Payoff" && <Payoff />}
-        {fn === "Destination" && <Destination />}
-        {fn === "Home Bases" && <HomeBases />}
+    <main
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/boxcars-map.jpeg")',
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Header */}
+      <header>
+        <div className="px-4 py-4 flex items-center gap-3">
+          {/*<div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+            <Image src="/train.png" alt="boxcars" width={28} height={28} />
+          </div>*/}
+          <div className="flex">
+            <div className="flex flex-col mt-2 items-end">
+              <div className="bg-yellow-50 rounded-tl-xl rounded-bl-xl border-3 border-r-0 border-amber-600 h-5 w-16" />
+              <div className="bg-yellow-50 rounded-bl-xl border-t-0 border-3 border-r-0 border-amber-600 h-5 w-12" />
+              <div className="bg-yellow-50 rounded-bl-xl border-t-0 border-3 border-r-0 border-amber-600 h-5 w-8" />
+            </div>
+            <div className="p-2 rounded-xl border-3 bg-yellow-50 border-amber-600">
+              <h1 className="p-2 text-2xl font-bold text-primary leading-tight rounded-lg border-3 bg-yellow-50 border-amber-600">
+                Boxcars Assistant
+              </h1>
+            </div>
+            <div className="flex flex-col mt-2 items-start">
+              <div className="rounded-tr-xl rounded-br-xl border-3 border-l-0 bg-yellow-50 border-amber-600 h-5 w-16" />
+              <div className="rounded-br-xl border-t-0 border-3 border-l-0 bg-yellow-50 border-amber-600 h-5 w-12" />
+              <div className="rounded-br-xl border-t-0 border-3 border-l-0 bg-yellow-50 border-amber-600 h-5 w-8" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="px-4 py-6 max-w-5xl mx-auto">
+        {/* Navigation */}
+        <div className="mb-8">
+          <Toggle
+            options={["Payoff", "Destination", "Players"]}
+            selected={fn}
+            onSelected={setFn}
+          />
+        </div>
+
+        {/* Content */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          {fn === "Payoff" && <Payoff />}
+          {fn === "Destination" && <Destination />}
+          {fn === "Players" && <Players />}
+        </div>
       </div>
     </main>
   );
